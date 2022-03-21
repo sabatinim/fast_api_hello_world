@@ -1,0 +1,16 @@
+version: '3.6'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: container/Dockerfile
+    volumes:
+      - ${PWD}/app:/code/app
+    ports:
+      - "8080:8080"
+    container_name: api
+    networks:
+        - api-net
+networks:
+  api-net:

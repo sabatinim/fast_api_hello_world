@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: container/Dockerfile
     volumes:
-      - ${PWD}/app:/code/app
+      - ${PWD}:/code
     ports:
       - "8080:8080"
     container_name: api

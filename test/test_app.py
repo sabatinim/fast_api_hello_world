@@ -2,10 +2,10 @@ import unittest
 
 from fastapi.testclient import TestClient
 
-from app.main import app_controller
+from app.main import app_controller, UseCase
 
 
-class TestableUseCase:
+class TestableUseCase(UseCase):
     def run(self):
         return "Test Code"
 

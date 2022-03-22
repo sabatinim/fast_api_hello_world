@@ -1,4 +1,9 @@
 #!/bin/bash
+trap state ERR EXIT
+
+function state() {
+  exit $?
+}
 
 echo "Building containers"
 docker-compose build api

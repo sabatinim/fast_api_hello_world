@@ -9,7 +9,7 @@ echo "Building containers"
 docker-compose build api
 
 echo "Check for unused/dead code"
-docker-compose run api vulture app/ test/
+docker-compose run api vulture app/ test/ whitelist.py
 
 echo "Running tests"
 docker-compose run api pytest

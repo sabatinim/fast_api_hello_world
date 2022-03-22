@@ -1,4 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
+FROM python:3.10.3-slim-bullseye
 
 WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt

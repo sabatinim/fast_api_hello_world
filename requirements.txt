@@ -1,6 +1,6 @@
 fastapi>=0.68.0,<0.69.0
 pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
-pytest
-requests
-vulture
+pytest>=7.1.1
+requests>=2.27.1
+vulture>=2.3

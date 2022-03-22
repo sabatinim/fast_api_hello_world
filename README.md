@@ -3,6 +3,6 @@ Fast API Hello World repository.
 
 
 Execute:
-- docker-compose build api
-- docker-compose run api pytest (run http tests)
-- docker-compose up api (up container and perform curl / or '/items/987?q=this%20is%20the%20query')
+- script/ci (build and execute tests)
+- docker-compose up api (run server)
+- curl http://localhost:8080/items/123\?q\="test"

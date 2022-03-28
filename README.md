@@ -1,6 +1,7 @@
-# fast_api_hello_world
-Fast API Hello World repository. 
+## Build
+![CI](https://github.com/sabatinim/fast_api_hello_world/actions/workflows/main.yml/badge.svg)
 
+#### [Read the related Blog Post](https://dev.to/maverick198/startup-project-with-fastapi-27im)
 
 Execute:
 - script/ci (build and execute tests)

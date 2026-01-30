@@ -3,7 +3,7 @@ import unittest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
-from app.main import UseCase, AppController, startup
+from app.main import UseCase, ProductionUseCase, startup
 
 
 class TestableUseCase(UseCase):
@@ -14,7 +14,7 @@ class TestableUseCase(UseCase):
 class TestApp(unittest.TestCase):
 
     def test_e2e_production_code(self):
-        client = TestClient(startup())
+        client = TestClient(startup(use_case=ProductionUseCase()))
         response = client.get("/items/987?q=this%20is%20the%20query")
         self.assertEqual(200, response.status_code)
         self.assertEqual(

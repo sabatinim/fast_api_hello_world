@@ -6,10 +6,11 @@ services:
       context: .
       dockerfile: container/Dockerfile
     volumes:
-      - ${PWD}:/code
+      - ${PWD}:/code:cached
     ports:
       - "8080:8080"
     container_name: api
+    command: sleep infinity
     networks:
         - api-net
 networks:
